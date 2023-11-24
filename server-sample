@@ -14,8 +14,13 @@
 # in controlled environments. It is not intended to be a full-featured web server.
 # It should not be used on a public network.
 
+. ./.env
 
-PORT=8080
-HOST="localhost"
+if [ -s env ]; then
+. env
+fi
 
-env php -S ${HOST} -S ${HOST}:${PORT} -t public
+# to run this must be `authbind --deep ./server-sample` 
+# previously do instalation of authbind and chown the owner by user that run of /etc/authbind/byport/$APP_PORT}
+
+env php -S ${APP_HOST} -S ${APP_HOST}:${APP_PORT} -t public
