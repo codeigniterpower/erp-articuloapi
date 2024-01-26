@@ -1,4 +1,4 @@
-#!/usr/bin/php82
+#!/usr/bin/php
 <?php
         chdir(__DIR__);
         require ("lib/guachi.php");

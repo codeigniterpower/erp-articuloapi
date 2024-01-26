@@ -168,39 +168,6 @@
         return in_array($bool, array(true, YES, "1", "yes", "true", "on"), true);
     }
 
-    /**
-     * Crea el directorio en el cloud
-     * @return string
-     */
-    function create_cloud_dir() {
-      $dir = sprintf('%scloud/%s/%s/%s/', ROOT, date('Y'),date('m'),date('d'));
-      mkdir($dir, 0777, true);
-      return $dir ;
-    }
-
-    /**
-     * Crea el ID loco de PICCORO
-     * @return string LOCO
-     */
-    function mkid() {
-      return date('YmdHis');
-    }
-
-    /**
-     * Decodifica un base64 y lo guarda en el filesystem
-     * @return void
-     */
-    function save_file($b64,$filepath) {
-      $ifp = fopen( $filepath, 'wb' ); 
-      $data = explode( ',', $b64 );
-      if ( isset($data[1])  ){
-        fwrite( $ifp, base64_decode( $data[ 1 ] ) );
-      }else{
-        fwrite( $ifp, base64_decode( $data[0] ));
-      }
-      fclose( $ifp );
-    }
-
     /* Convert mixed to boolean
      *
      * INPUT:  mixed
