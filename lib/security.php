@@ -173,7 +173,7 @@
 
 		$result = "";
 		for ($i = 0; $i < $length; $i++) {
-			$result .= $characters[mt_rand(0, $max_chars)];
+			$result .= $characters[is_php('8.0') ? random_int(0, $max_chars) : php_rand(0,$max_chars)];
 		}
 
 		return $result;
