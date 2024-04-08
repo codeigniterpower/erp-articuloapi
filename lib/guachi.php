@@ -12,7 +12,7 @@
     define("PASSWORD_MAX_LENGTH", 1000);
     define("DIR_CONTROLLERS",   ROOT . 'controllers' . DS );
     define("DIR_MODELS",        ROOT . 'models'      . DS );
-    define("DIR_VIEWS",         ROOT . 'views'       . DS );
+    define("DIR_VIEWS",         ROOT . 'public/views'       . DS );
     define("ERROR_MODULE",'notFound');
     define("LOGIN_MODULE",'login');
 

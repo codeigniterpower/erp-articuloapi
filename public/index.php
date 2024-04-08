@@ -16,8 +16,7 @@ require_once realpath(dirname( __DIR__ ) ) . '/lib/security.php';
 /*Iniciamos todas las instancias*/
 $auth           = auth::iniciar();
 $router         = router::iniciar();
-//$view           = view::iniciar();
-$view = null;
+$view           = view::iniciar();
 
 /*Se incluye el modelo*/
 if (file_exists($file = DIR_MODELS.$router->module.".php")) {

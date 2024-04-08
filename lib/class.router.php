@@ -10,6 +10,7 @@ Copyright (c) 2018  Díaz  Víctor  aka  (Máster Vitronic)
 <vitronic2@gmail.com>   <mastervitronic@vitronic.com.ve>
 */
 
+#[\AllowDynamicProperties]
 class router {
 
     /**
